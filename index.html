@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+  , initial-scale=1.0"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>GitHub Demo</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@600&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .main {
+        display: flex;
+      }
+      .left {
+        background-color: rgb(14, 14, 61);
+        height: 100vh;
+        width: 400px;
+        /* text-align: center; */
+        padding-left: 20px;
+      }
+      .img img {
+        width: 150px;
+        height: 100px;
+        margin-top: 3rem;
+      }
+      .content {
+        margin-top: 3cm;
+      }
+      .content ul li {
+        padding: 10px;
+        color: white;
+        font-weight: bold;
+        font-family: "Roboto Slab", serif;
+        list-style-type: none;
+      }
+      .right {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: rgb(18, 6, 27); */
+        font-family: "EB Garamond", serif;
+        background-image: url("https://wallpaperaccess.com/full/3979457.jpg");
+    
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        opacity: 1;
+      }
+      .right img {
+        border-radius: 50%;
+      }
+      .item {
+        margin-top: 2rem;
+        color: white;
+        text-align: center;
+        font-weight: 900;
+      }
+      span {
+        color: rgb(175, 136, 136);
+      }
+      .icons {
+        padding-top: 90px;
+        display: flex;
+      }
+      .icons .fa {
+        height: 30px;
+        width: 30px;
+        padding: 5px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main" id="suman">
+      <div class="left">
+        <div class="img">
+          <img
+            src="data:image/png;base64,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"
+            alt=""
+          />
+        </div>
+
+        <div class="content">
+          <ul>
+            <li>Home</li>
+
+            <li>About</li>
+
+            <li>Services</li>
+
+            <li>Portpolio</li>
+
+            <li>News</li>
+
+            <li>Contact</li>
+          </ul>
+        </div>
+
+        <div class="icons">
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-instagram"></i>
+          <i class="fa fa-globe"></i>
+          <i class="fa fa-music"></i>
+        </div>
+      </div>
+
+      <div class="right">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Btf1wcaLbDypx0lTvyqFOJAgWQqnp8bz4w&usqp=CAU"
+          alt=""
+        />
+
+        <div class="item">
+          <h1>SUMAN <span>MALAKAR</span></h1>
+          <p>I'm a Programmer</p>
+
+          <div class="button"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
